@@ -11,10 +11,7 @@ import { MetalTicker } from "@/components/MetalTicker";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-background text-white mesh-gradient relative">
-      <header className="fixed top-0 w-full z-60">
-        <MetalTicker />
-      </header>
+    <main>
       <Navbar />
       <Hero />
       <ProblemSolution />
