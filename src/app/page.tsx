@@ -1,8 +1,7 @@
 import { Navbar } from "@/components/Navbar";
-import { Hero } from "@/components/Hero";
+import { HeroSection } from "@/components/HeroSection";
 import { ProblemSolution } from "@/components/ProblemSolution";
 import { FeatureGrid } from "@/components/FeatureGrid";
-import { SecuritySpotlight } from "@/components/SecuritySpotlight";
 import { Testimonials } from "@/components/Testimonials";
 import { FAQ } from "@/components/FAQ";
 import { CTASection } from "@/components/CTASection";
@@ -12,11 +11,11 @@ import { MetalTicker } from "@/components/MetalTicker";
 export default function Home() {
   return (
     <main>
+      {/* <MetalTicker /> */}
       <Navbar />
-      <Hero />
+      <HeroSection />
       <ProblemSolution />
       <FeatureGrid />
-      <SecuritySpotlight />
       <Testimonials />
       <FAQ />
       <CTASection />

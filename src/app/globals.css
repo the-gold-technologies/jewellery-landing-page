@@ -9,12 +9,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
   --font-heading: var(--font-heading);
-  
-  --color-gold: #D4AF37;
-  --color-gold-light: #F9E29B;
-  --color-gold-dark: #A67C00;
-  --color-charcoal: #0F0F0F;
-  --color-teal-accent: #1A3C34;
+
+  --color-gold: #d4af37;
+  --color-gold-light: #f9e29b;
+  --color-gold-dark: #a67c00;
+  --color-charcoal: #0f0f0f;
+  --color-teal-accent: #1a3c34;
 
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
@@ -25,23 +25,23 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0F0F0F;
-  --primary: #0F0F0F;
+  --foreground: #0f0f0f;
+  --primary: #0f0f0f;
   --primary-foreground: #ffffff;
   --border: #e2e8f0;
   --input: #e2e8f0;
-  --ring: #0F0F0F;
+  --ring: #0f0f0f;
   --radius: 0.75rem;
 }
 
 .dark {
-  --background: #09090B;
-  --foreground: #FAFAFA;
-  --primary: #D4AF37;
-  --primary-foreground: #09090B;
+  --background: #09090b;
+  --foreground: #fafafa;
+  --primary: #d4af37;
+  --primary-foreground: #09090b;
   --border: rgba(255, 255, 255, 0.08);
   --input: rgba(255, 255, 255, 0.05);
-  --ring: #D4AF37;
+  --ring: #d4af37;
 }
 
 @layer base {
@@ -51,7 +51,12 @@
   body {
     @apply bg-background text-foreground antialiased selection:bg-gold/30;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading tracking-tight;
   }
 }
@@ -64,18 +69,22 @@
     @apply bg-white/5 backdrop-blur-2xl border border-white/10 rounded-full py-2 px-6 shadow-2xl;
   }
   .gold-gradient {
-    background: linear-gradient(135deg, #D4AF37 0%, #F9E29B 50%, #A67C00 100%);
+    background: linear-gradient(135deg, #d4af37 0%, #f9e29b 50%, #a67c00 100%);
   }
   .gold-text-gradient {
-    background: linear-gradient(135deg, #D4AF37 0%, #F9E29B 50%, #D4AF37 100%);
+    background: linear-gradient(135deg, #d4af37 0%, #f9e29b 50%, #d4af37 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   .mesh-gradient {
-    background-image: 
+    background-image:
       radial-gradient(at 0% 0%, rgba(212, 175, 55, 0.08) 0px, transparent 50%),
       radial-gradient(at 100% 0%, rgba(26, 60, 52, 0.08) 0px, transparent 50%),
-      radial-gradient(at 100% 100%, rgba(212, 175, 55, 0.05) 0px, transparent 50%),
+      radial-gradient(
+        at 100% 100%,
+        rgba(212, 175, 55, 0.05) 0px,
+        transparent 50%
+      ),
       radial-gradient(at 0% 100%, rgba(26, 60, 52, 0.05) 0px, transparent 50%);
   }
 }

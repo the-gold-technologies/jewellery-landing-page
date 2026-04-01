@@ -23,10 +23,20 @@ export function MetalTicker() {
       >
         {displayRates.map((rate, index) => (
           <div key={index} className="inline-flex items-center mx-8 space-x-3">
-            <span className="text-xs font-bold text-white/40 uppercase tracking-widest">{rate.label}</span>
-            <span className="text-sm font-mono font-bold text-white">{rate.price}</span>
-            <span className={`flex items-center text-xs font-bold ${rate.up ? 'text-emerald-400' : 'text-red-400'}`}>
-              {rate.up ? <TrendingUp size={12} className="mr-1" /> : <TrendingDown size={12} className="mr-1" />}
+            <span className="text-xs font-bold text-white/40 uppercase tracking-widest">
+              {rate.label}
+            </span>
+            <span className="text-sm font-mono font-bold text-white">
+              {rate.price}
+            </span>
+            <span
+              className={`flex items-center text-xs font-bold ${rate.up ? "text-emerald-400" : "text-red-400"}`}
+            >
+              {rate.up ? (
+                <TrendingUp size={12} className="mr-1" />
+              ) : (
+                <TrendingDown size={12} className="mr-1" />
+              )}
               {rate.change}
             </span>
           </div>
