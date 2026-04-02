@@ -2,12 +2,18 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Play, Sparkles, ArrowRight } from "lucide-react";
+import {
+  Play,
+  Sparkles,
+  ArrowRight,
+  Activity,
+  ShieldCheck,
+} from "lucide-react";
 import Link from "next/link";
 
 export function HeroSection() {
   return (
-    <section className=" relative py-20">
+    <section className=" relative py-16">
       {/* Background soft glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 blur-[150px] rounded-full pointer-events-none" />
 
@@ -24,7 +30,7 @@ export function HeroSection() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full mb-10"
+              className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full mb-8"
             >
               <Sparkles className="h-3 w-3 text-gold" />
               <span className="text-[10px] capitalize tracking-[0.2em] font-bold text-white/80">
@@ -51,35 +57,35 @@ export function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8">
-              <Link href="/">
+              <Link href="#features">
                 <Button
-                  className="bg-gold cursor-pointer px-12 py-8 hover:bg-gold-dark hover:text-white 
-                  hover:scale-105 rounded-full text-[12px] text-charcoal font-bold transition-all 
+                  className="bg-gold cursor-pointer px-10 py-7 hover:bg-gold-dark hover:text-white 
+                  hover:scale-105 rounded-full text-[15px] text-charcoal font-semibold transition-all 
                   duration-500  shadow-2xl shadow-gold/20"
                 >
-                  Book a Demo <ArrowRight className="ml-2 h-4 w-4" />
+                  Experience Karatrix <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="/">
+              <Link href="#features">
                 <Button
                   variant="outline"
-                  className="border-white/10 text-white/80 hover:bg-white/5 px-12 py-8 
-                  rounded-full text-[12px] capitalize tracking-[0.2em] transition-all duration-500 cursor-pointer"
+                  className="border-white/10 text-white/80 hover:bg-white/5 px-10 py-7 
+                  rounded-full text-[15px] capitalize transition-all duration-500 cursor-pointer"
                 >
-                  Launch Sandbox
+                  Discover Ecosystem
                 </Button>
               </Link>
             </div>
 
             {/*  Trusted by */}
-            <div className="flex items-center space-x-10 max-w-7xl m-auto mt-10">
+            <div className="flex items-center space-x-5 max-w-7xl m-auto mt-10">
               <div className="flex -space-x-4">
                 {[1, 2, 3, 4].map((i) => (
                   <img
                     key={i}
                     src={`/owner_${i}.png`}
                     alt={`Global Boutique Owner ${i}`}
-                    className="h-12 w-12 rounded-full border-[3px] border-charcoal bg-white/5 object-cover backdrop-blur-sm"
+                    className="h-10 w-10 rounded-full border-[3px] border-charcoal bg-white/5 object-cover backdrop-blur-sm"
                   />
                 ))}
               </div>
@@ -101,20 +107,6 @@ export function HeroSection() {
             <div className="relative aspect-[4/3] glass rounded-[3.5rem] overflow-hidden border border-white/10 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.7)] group">
               <div className="absolute inset-0 bg-linear-to-tr from-black/80 via-transparent to-gold/5 opacity-80" />
 
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="flex flex-col items-center">
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    className="h-24 w-24 rounded-full bg-charcoal/40 backdrop-blur-2xl flex items-center justify-center border border-white/10 group-hover:border-gold/30 transition-all duration-700 cursor-pointer shadow-2xl"
-                  >
-                    <Play className="h-10 w-10 text-gold fill-gold/10 ml-1" />
-                  </motion.div>
-                  <span className="mt-8 text-[11px] uppercase tracking-[0.4em] font-bold text-gold/40 group-hover:text-gold/80 transition-colors duration-500">
-                    The Experience
-                  </span>
-                </div>
-              </div>
-
               {/* Material UI elements with depth */}
               <motion.div
                 animate={{ y: [0, -15, 0], rotate: [0, 1, 0] }}
@@ -123,13 +115,37 @@ export function HeroSection() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute top-12 right-12 glass p-6 rounded-3xl w-56 border-white/10 shadow-2xl"
+                className="absolute top-12 right-12 glass p-6 rounded-3xl w-56 border-white/10 shadow-2xl z-20"
               >
-                <div className="flex justify-between items-center mb-4">
-                  <div className="h-2 w-16 bg-gold/40 rounded-full" />
-                  <div className="h-2 w-2 bg-gold rounded-full" />
+                <div className="flex justify-between items-center mb-6">
+                  <div className="flex items-center space-x-2">
+                    <div className="h-2 w-2 bg-gold rounded-full animate-pulse" />
+                    <span className="text-[10px] text-white/40 font-bold tracking-widest uppercase">
+                      Live Sync
+                    </span>
+                  </div>
+                  <Activity className="h-3 w-3 text-gold/50" />
                 </div>
-                <div className="h-10 w-full bg-white/5 rounded-xl border border-white/5" />
+                <div className="space-y-3">
+                  <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                    <motion.div
+                      animate={{ width: ["30%", "85%", "60%"] }}
+                      transition={{ duration: 4, repeat: Infinity }}
+                      className="h-full bg-gold/40"
+                    />
+                  </div>
+                  <div className="flex justify-between items-end">
+                    <div>
+                      <p className="text-[10px] text-white/30 uppercase tracking-tighter">
+                        Active SKUs
+                      </p>
+                      <p className="text-xl font-heading text-white">12,482</p>
+                    </div>
+                    <div className="text-[8px] text-gold font-bold px-2 py-1 bg-gold/10 rounded-lg">
+                      +0.4%
+                    </div>
+                  </div>
+                </div>
               </motion.div>
 
               <motion.div
@@ -139,16 +155,41 @@ export function HeroSection() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute bottom-12 left-12 glass p-6 rounded-3xl w-64 border-white/10 shadow-2xl"
+                className="absolute bottom-12 left-12 glass p-6 rounded-[2.5rem] w-64 border-white/10 shadow-2xl z-20"
               >
                 <div className="flex items-center space-x-4 mb-5">
-                  <div className="h-10 w-10 rounded-2xl bg-gold/10 border border-gold/20" />
-                  <div className="space-y-2">
-                    <div className="h-1.5 w-16 bg-white/20 rounded-full" />
-                    <div className="h-1.5 w-10 bg-white/10 rounded-full" />
+                  <div className="h-12 w-12 rounded-2xl bg-gold/10 border border-gold/20 flex items-center justify-center">
+                    <ShieldCheck className="h-6 w-6 text-gold" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <p className="text-[10px] text-white/40 font-bold uppercase tracking-widest">
+                      Precision
+                    </p>
+                    <div className="h-1.5 w-24 bg-white/10 rounded-full overflow-hidden">
+                      <div className="h-full w-[98%] bg-white/40" />
+                    </div>
                   </div>
                 </div>
-                <div className="h-16 w-full bg-linear-to-r from-gold/10 to-transparent rounded-2xl border border-white/5" />
+                <div className="p-4 bg-white/2 rounded-2xl border border-white/5">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-[9px] text-white/40 uppercase">
+                      Audit Status
+                    </span>
+                    <span className="text-[9px] text-gold font-bold">
+                      VERIFIED
+                    </span>
+                  </div>
+                  <div className="flex -space-x-2">
+                    {[1, 2, 3].map((i) => (
+                      <img
+                        key={i}
+                        src={`/owner_${i}.png`}
+                        alt={`Global Auditor ${i}`}
+                        className="h-5 w-5 rounded-full border border-charcoal bg-white/10 object-cover"
+                      />
+                    ))}
+                  </div>
+                </div>
               </motion.div>
             </div>
 

@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Send } from "lucide-react";
+import { ArrowRight, Download, Send, Users } from "lucide-react";
 
 export function CTASection() {
   return (
@@ -32,29 +32,17 @@ export function CTASection() {
                 workspace and reclaim operational clarity today.
               </p>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-                <div className="relative flex-1 max-w-md w-full">
-                  <input
-                    type="email"
-                    placeholder="Enter your work email"
-                    className="w-full bg-white/5 border border-white/10 rounded-full px-8 py-4 text-white focus:outline-none focus:border-gold transition-colors"
-                  />
-                  <button className="absolute right-2 top-2 bg-gold text-charcoal p-2 rounded-full hover:bg-gold-dark transition-colors">
-                    <ArrowRight size={24} />
-                  </button>
-                </div>
-              </div>
-
-              <div className="flex flex-col sm:flex-row justify-center items-center gap-10">
-                <Button className="bg-gold hover:bg-gold-dark text-black font-bold px-12 py-8 h-auto text-[13px] uppercase tracking-[0.2em] rounded-full shadow-2xl shadow-gold/20 transition-all duration-500 hover:scale-105 active:scale-95 text-center">
-                  Secure Your Executive Workspace
+              <div className="flex flex-col lg:flex-row justify-center items-center gap-6 lg:gap-10">
+                <Button className="bg-gold hover:bg-gold-dark text-black font-bold px-10 py-7 h-auto text-[13px] uppercase tracking-[0.2em] rounded-full shadow-2xl shadow-gold/20 transition-all duration-500 hover:scale-105 active:scale-95 text-center cursor-pointer">
+                  Request Briefing
                 </Button>
-                <button className="flex cursor-pointer items-center text-white/40 hover:text-gold transition-all duration-500 font-bold uppercase tracking-[0.3em] text-[10px] group">
-                  <Download
-                    size={18}
-                    className="mr-3 group-hover:-translate-y-1 transition-transform"
+
+                <button className="flex cursor-pointer items-center text-white font-bold uppercase tracking-[0.3em] text-[10px] group px-10 py-7 border border-white/10 rounded-full hover:bg-white/5 transition-all duration-500">
+                  <Users
+                    size={16}
+                    className="mr-3 group-hover:scale-110 transition-transform text-gold"
                   />
-                  Download Performance Blueprint
+                  Join Network
                 </button>
               </div>
             </motion.div>

@@ -9,6 +9,10 @@ import { motion, AnimatePresence } from "framer-motion";
 export function Navbar() {
   const navLinks = [
     { name: "Features", href: "#features" },
+    {
+      name: "Solutions",
+      href: "#solutions",
+    },
     { name: "Testimonials", href: "#testimonials" },
     { name: "FAQ", href: "#faq" },
   ];
@@ -16,14 +20,14 @@ export function Navbar() {
   return (
     <nav className=" flex items-center px-20 w-full justify-between py-6 sticky top-2 z-50">
       {/* Logo icon */}
-      <img src="/Karatrix trans.png" alt="Karatrix" className=" h-10" />
+      <img src="/Karatrix trans.png" alt="Karatrix" className=" h-8" />
       <div className=" glass-pill">
-        <div className=" flex items-center gap-10 py-2.5 px-4.5">
+        <div className=" flex items-center gap-10 py-1 px-1.5">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-[13px] font-bold capitalize tracking-widest text-white hover:text-gold "
+              className="text-[13px] font-semibold capitalize tracking-widest text-white hover:text-gold "
             >
               {link.name}
             </Link>
