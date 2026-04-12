@@ -43,9 +43,12 @@ export function Navbar() {
           Login
         </Link>
 
-        <Button className="bg-gold hover:bg-gold-dark text-charcoal hover:text-white font-bold py-6 px-8 rounded-4xl cursor-pointer">
+        <a
+          href="#contact"
+          className="bg-gold hover:bg-gold-dark text-charcoal hover:text-white font-bold py-6 px-8 rounded-4xl cursor-pointer"
+        >
           Book Demo
-        </Button>
+        </a>
       </div>
     </nav>
   );

@@ -1,27 +1,38 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, XCircle, CheckCircle2 } from "lucide-react";
+import {
+  ArrowRight,
+  SearchX,
+  ActivitySquare,
+  Users,
+  CheckCircle2,
+  ShieldCheck,
+  Eye,
+  PackageCheck,
+} from "lucide-react";
 
 export function ProblemSolution() {
   const points = [
     {
-      pain: "Manual ledgers and nightly calls for rates",
-      solution: "Unified dashboard with real-time metal-rate control.",
-      icon: <XCircle className="h-5 w-5 text-red-400" />,
-      solveIcon: <CheckCircle2 className="h-5 w-5 text-emerald-400" />,
+      pain: "No Clear Stock Tracking",
+      solution:
+        "Stock doesn't match and no one knows where the issue happened.",
+      icon: <SearchX className="h-5 w-5 text-red-400" />,
+      solveIcon: <PackageCheck className="h-5 w-5 text-emerald-400" />,
     },
     {
-      pain: "No audit trail for stock adjustments",
-      solution: "Typed stock ledger with reasons & timestamps.",
-      icon: <XCircle className="h-5 w-5 text-red-400" />,
-      solveIcon: <CheckCircle2 className="h-5 w-5 text-emerald-400" />,
+      pain: "No Visibility on Daily Activity",
+      solution:
+        "You can't clearly track what was sold or updated during the day.",
+      icon: <ActivitySquare className="h-5 w-5 text-red-400" />,
+      solveIcon: <Eye className="h-5 w-5 text-emerald-400" />,
     },
     {
-      pain: "Over-permissioned staff risking data",
-      solution: "Role + permission toggles enforcing least privilege.",
-      icon: <XCircle className="h-5 w-5 text-red-400" />,
-      solveIcon: <CheckCircle2 className="h-5 w-5 text-emerald-400" />,
+      pain: "Too Much Dependency on Staff",
+      solution: "Mistakes or gaps go unnoticed without proper control.",
+      icon: <Users className="h-5 w-5 text-red-400" />,
+      solveIcon: <ShieldCheck className="h-5 w-5 text-emerald-400" />,
     },
   ];
 
@@ -31,16 +42,11 @@ export function ProblemSolution() {
         {/* Header */}
         <div className="text-center mb-24">
           <h2 className="text-[10px] font-bold uppercase tracking-[0.5em] text-gold mb-6">
-            Solutions
+            No Clarity. Real Loss.
           </h2>
           <p className="text-4xl md:text-6xl font-heading font-medium text-white max-w-4xl mx-auto leading-tight">
-            Transcend the{" "}
-            <span className="italic text-white/30 font-light">Chaos</span> of{" "}
-            <br />
-            Legacy{" "}
-            <span className="gold-text-gradient italic">
-              Jewellery Operations.
-            </span>
+            Where Jewellery Shops{" "}
+            <span className="gold-text-gradient italic">Lose Control</span>
           </p>
         </div>
 
@@ -89,6 +95,12 @@ export function ProblemSolution() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-20 text-center">
+          <p className="text-xl font-heading font-medium text-white/70 italic max-w-4xl mx-auto">
+            Small gaps daily lead to big losses over time.
+          </p>
         </div>
       </div>
     </section>

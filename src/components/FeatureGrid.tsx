@@ -173,49 +173,43 @@ export function FeatureGrid() {
 
   const features = [
     {
-      title: "Inventory Workspace",
-      desc: "High-fidelity SKU tracking with automated barcodes and purity metrics.",
+      title: "Inventory Workspace: Track Every Item Clearly",
+      desc: "Know your stock by weight, quantity, and category.",
       icon: <LayoutDashboard className="h-6 w-6" />,
       className: "md:col-span-2 md:row-span-1",
     },
     {
-      title: "Stock Timeline",
-      desc: "Full audit trail for every gram. Reason-coded movements with precise timestamps.",
+      title: "Stock Timeline: See Every Movement",
+      desc: "Every stock change is recorded properly.",
       icon: <History className="h-6 w-6" />,
       className: "md:col-span-1 md:row-span-1",
     },
     {
-      title: "Metal Rate Console",
-      desc: "Real-time pricing engine. Global gold/silver rates synced instantly.",
+      title: "Metal Rate Console: Update Gold & Silver Rates Anytime",
+      desc: "Avoid pricing mistakes with real-time updates.",
       icon: <RotateCcw className="h-6 w-6" />,
       className: "md:col-span-1 md:row-span-1",
     },
     {
-      title: "Permission Matrix",
-      desc: "Owners toggle granular access at invite time — enforce least privilege.",
+      title: "Permission Matrix: Control Staff Access",
+      desc: "Give only the access they need.",
       icon: <ShieldAlert className="h-6 w-6" />,
       className: "md:col-span-1 md:row-span-1",
       component: <PermissionTable />,
     },
     {
-      title: "Branch Logistics",
-      desc: "Seamless inter-shop inventory transfers with real-time status.",
+      title: "Insights Logistics: Know Your Daily Business",
+      desc: "See what's happening without confusion.",
       icon: <ArrowRightLeft className="h-6 w-6" />,
       className: "md:col-span-1 md:row-span-1",
       component: <LogisticsVisual />,
     },
     {
-      title: "Reports & Exports",
-      desc: "Cinematic data visualizations. Audit-grade, GST-ready XLSX exports.",
+      title: "Reports & Exports: Clear Reports Anytime",
+      desc: "Sales, stock, everything in one place.",
       icon: <BarChart3 className="h-6 w-6" />,
       className: "md:col-span-2 md:row-span-1",
       component: <ReportsVisual />,
-    },
-    {
-      title: "Global Sync",
-      desc: "Automated multi-branch replication ensuring total data consistency.",
-      icon: <Sparkles className="h-6 w-6" />,
-      className: "md:col-span-1 md:row-span-1",
     },
   ];
 
@@ -227,16 +221,17 @@ export function FeatureGrid() {
             <div className="flex items-center space-x-2 mb-6">
               <Sparkles className="h-4 w-4 text-gold/60" />
               <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/30 italic">
-                Core Capabilities
+                Manage everything in one place.
               </span>
             </div>
             <h2 className="text-4xl md:text-6xl font-heading font-medium text-white mb-6 leading-tight">
-              The MVP{" "}
-              <span className="gold-text-gradient italic">Feature Suite.</span>
+              Everything You Need to{" "}
+              <span className="gold-text-gradient italic">
+                Run Your Shop Smoothly.
+              </span>
             </h2>
             <p className="text-white/40 font-light max-w-xl text-lg">
-              Engineered to eliminate the friction of legacy updates and provide
-              total operational clarity.
+              Manage stock, staff, and daily operations - all in one place.
             </p>
           </div>
           <Printer className="h-16 w-16 text-white/5 hidden md:block hover:text-gold/10 transition-colors duration-700" />

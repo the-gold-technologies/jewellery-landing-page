@@ -20,30 +20,31 @@ export function CTASection() {
               viewport={{ once: true }}
             >
               <h2 className="text-5xl md:text-7xl font-heading font-medium mb-10 leading-tight">
-                Command Your <br />
+                Start Managing Your <br />
                 <span className="gold-text-gradient italic">
-                  Jewellery Empire.
+                  Jewellery Shop with Clarity.
                 </span>
               </h2>
 
               <p className="text-xl text-white/50 mb-14 max-w-3xl mx-auto font-light leading-relaxed">
-                Eliminate legacy friction and join the elite multi-branch
-                networks scaling with absolute SKU-level fidelity. Deploy your
-                workspace and reclaim operational clarity today.
+                Stop relying on manual tracking and confusion. Know exactly
+                what's happening in your business every day.
               </p>
 
               <div className="flex flex-col lg:flex-row justify-center items-center gap-6 lg:gap-10">
-                <Button className="bg-gold hover:bg-gold-dark text-black font-bold px-10 py-7 h-auto text-[13px] uppercase tracking-[0.2em] rounded-full shadow-2xl shadow-gold/20 transition-all duration-500 hover:scale-105 active:scale-95 text-center cursor-pointer">
-                  Request Briefing
-                </Button>
+                <a
+                  href="#features"
+                  className="bg-gold hover:bg-gold-dark text-black font-bold px-10 py-5 h-auto text-[13px] uppercase tracking-[0.2em] rounded-full shadow-2xl shadow-gold/20 transition-all duration-500 hover:scale-105 active:scale-95 text-center cursor-pointer"
+                >
+                  Experience Karatrix
+                </a>
 
-                <button className="flex cursor-pointer items-center text-white font-bold uppercase tracking-[0.3em] text-[10px] group px-10 py-7 border border-white/10 rounded-full hover:bg-white/5 transition-all duration-500">
-                  <Users
-                    size={16}
-                    className="mr-3 group-hover:scale-110 transition-transform text-gold"
-                  />
-                  Join Network
-                </button>
+                <a
+                  href="#contact"
+                  className="flex cursor-pointer items-center text-white font-bold uppercase tracking-[0.3em] text-[10px] group px-10 py-5 border border-white/10 rounded-full hover:bg-white/5 transition-all duration-500"
+                >
+                  Contact Us
+                </a>
               </div>
             </motion.div>
           </div>

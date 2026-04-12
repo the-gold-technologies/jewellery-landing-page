@@ -34,45 +34,42 @@ export function HeroSection() {
             >
               <Sparkles className="h-3 w-3 text-gold" />
               <span className="text-[10px] capitalize tracking-[0.2em] font-bold text-white/80">
-                Pioneer{" "}
-                <span className="text-gold italic">Digital Jewellery</span>{" "}
-                Workspace
+                No confusion.{" "}
+                <span className="text-gold italic">No technical setup.</span>{" "}
+                Start in minutes.
               </span>
             </motion.div>
 
-            {/* title */}
-            <h1 className=" text-7xl font-heading font-medium leading-20 text-white mb-6">
-              Command Every <br />
-              <span className="italic gold-text-gradient">Jewellery </span>
-              Inventory in <span className="font-light">Real Time.</span>
+            <h1 className=" text-5xl md:text-7xl font-heading font-medium leading-tight text-white mb-6">
+              Manage Your <br />
+              <span className="italic gold-text-gradient">
+                Jewellery Shops{" "}
+              </span>
+              Without Chaos.
             </h1>
 
             <p className=" text-xl text-white/80 mb-10 leading-relaxed font-light">
-              The high-performance workspace for elite jewellery retailers.
-              Built for{" "}
-              <span className="italic gold-text-gradient">precision</span>,
-              scaled for{" "}
-              <span className="italic gold-text-gradient">growth</span>, secured
-              for <span className="italic gold-text-gradient">eternity</span>.
+              Track stock, control staff activity, manage gold & silver rates,
+              and know exactly what's happening in your shop — every single day.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8">
               <Link href="#features">
                 <Button
                   className="bg-gold cursor-pointer px-10 py-7 hover:bg-gold-dark hover:text-white 
-                  hover:scale-105 rounded-full text-[15px] text-charcoal font-semibold transition-all 
+                  hover:scale-105 rounded-full text-[15px] font-semibold transition-all 
                   duration-500  shadow-2xl shadow-gold/20"
                 >
-                  Experience Karatrix <ArrowRight className="ml-2 h-4 w-4" />
+                  Experience Karatrix
                 </Button>
               </Link>
-              <Link href="#features">
+              <Link href="#contact">
                 <Button
                   variant="outline"
                   className="border-white/10 text-white/80 hover:bg-white/5 px-10 py-7 
-                  rounded-full text-[15px] capitalize transition-all duration-500 cursor-pointer"
+                  rounded-full text-[15px] transition-all duration-500 cursor-pointer"
                 >
-                  Discover Ecosystem
+                  Contact Us
                 </Button>
               </Link>
             </div>

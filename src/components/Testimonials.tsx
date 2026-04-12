@@ -9,24 +9,29 @@ export function Testimonials() {
 
   const testimonials = [
     {
-      text: "Variance dropped 37% in two months. The visibility we now have across our regional network is unprecedented.",
+      text: "Earlier we had confusion in stock and entries. Now everything is clear. This software completely transformed how securely we operate.",
       author: "Anita S.",
-      role: "Regional Ops Lead",
+      role: "Shop Owner",
     },
     {
-      text: "Metal rate pushes take seconds, not nightly calls. It's the high-performance workspace we've been waiting for.",
+      text: "Managing staff and stock became simple and more controlled. The real-time updates save us hours of manual auditing every week.",
       author: "Rakesh D.",
-      role: "Franchise Owner",
+      role: "Shop Owner",
     },
     {
-      text: "Audit exports plug straight into GST filings. The precision and SKU-level fidelity are world-class.",
+      text: "No more mismatch. Everything is properly tracked now. I can finally leave my shop without worrying about inventory discrepancies.",
       author: "Meena P.",
-      role: "Finance Head",
+      role: "Shop Owner",
     },
     {
-      text: "Our multi-branch network finally feels like a single, well-oiled machine. The synchronization speed is just incredible.",
-      author: "Sanjay R.",
-      role: "Logistics Director",
+      text: "The metal rate real-time sync alone prevents daily losses. It is entirely seamless and our staff adapted to it immediately.",
+      author: "Sanjay K.",
+      role: "Shop Owner",
+    },
+    {
+      text: "We run three different boutiques and this ecosystem unified our reporting. Absolute peace of mind.",
+      author: "Priya M.",
+      role: "Multi-Store Owner",
     },
   ];
 
@@ -79,7 +84,7 @@ export function Testimonials() {
 
               return (
                 <motion.div
-                  key={testimonials[itemIndex].author}
+                  key={`testimonial-${itemIndex}`}
                   initial={{
                     opacity: 0,
                     scale: 0.6,
@@ -117,26 +122,24 @@ export function Testimonials() {
                   className={`absolute w-[90vw] max-w-[550px] flex flex-col items-center pointer-events-none ${isCenter ? "z-20 pointer-events-auto" : "z-10"}`}
                 >
                   <div className="group relative w-full">
-                    <div className="absolute inset-0 bg-gold/5 blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                    <div className="relative rounded-[2rem] p-10 sm:p-14 flex flex-col justify-between transition-all duration-700 bg-[#1c1c1c] shadow-2xl border border-white/5 min-h-[350px]">
+                      <Quote className="absolute top-10 right-10 h-14 w-14 text-gold/10 transition-colors duration-700 group-hover:text-gold/20" />
 
-                    <div className="relative glass rounded-[3rem] p-10 sm:p-14 border border-white/10 flex flex-col justify-between transition-all duration-700 hover:border-gold/30 hover:shadow-[0_0_50px_rgba(212,175,55,0.1)] bg-white/[0.03] backdrop-blur-3xl min-h-[350px]">
-                      <Quote className="h-12 w-12 text-gold/10 mb-10 absolute top-10 right-10 group-hover:text-gold/20 transition-colors duration-700" />
-
-                      <div className="relative z-10">
-                        <p className="text-xl sm:text-3xl font-heading text-white italic leading-relaxed font-light mb-12">
+                      <div className="relative z-10 flex-grow flex items-center mb-10">
+                        <p className="text-xl sm:text-2xl font-serif text-white/90 italic leading-relaxed">
                           "{testimonials[itemIndex].text}"
                         </p>
                       </div>
 
                       <div className="relative z-10 flex items-center space-x-6">
-                        <div className="h-16 w-16 sm:h-20 sm:w-20 rounded-full bg-linear-to-tr from-gold/20 to-transparent border border-white/10 flex items-center justify-center font-heading text-gold font-bold italic text-3xl shadow-inner text-gold">
+                        <div className="h-16 w-16 rounded-full bg-[#2a2a2a] flex items-center justify-center font-serif font-bold text-2xl text-gold shrink-0 border border-gold/10 border-b-gold/30">
                           {testimonials[itemIndex].author.charAt(0)}
                         </div>
-                        <div>
-                          <div className="font-heading text-xl sm:text-2xl font-medium text-white mb-1">
+                        <div className="flex flex-col justify-center">
+                          <div className="font-serif text-xl font-medium text-white/90 mb-1">
                             {testimonials[itemIndex].author}
                           </div>
-                          <div className="text-[10px] sm:text-[12px] font-bold text-gold/60 uppercase tracking-[0.3em]">
+                          <div className="text-[9px] font-bold text-gold uppercase tracking-[0.25em]">
                             {testimonials[itemIndex].role}
                           </div>
                         </div>

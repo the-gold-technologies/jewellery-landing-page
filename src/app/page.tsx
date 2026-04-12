@@ -5,6 +5,8 @@ import { FeatureGrid } from "@/components/FeatureGrid";
 import { Testimonials } from "@/components/Testimonials";
 import { FAQ } from "@/components/FAQ";
 import { CTASection } from "@/components/CTASection";
+import { PricingSection } from "@/components/PricingSection";
+import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -16,7 +18,9 @@ export default function Home() {
       <FeatureGrid />
       <Testimonials />
       <FAQ />
+      <PricingSection />
       <CTASection />
+      <ContactSection />
       <Footer />
     </main>
   );
