@@ -103,7 +103,8 @@ export function PricingSection() {
 
   const getPlans = async () => {
     try {
-      const fetchPlans = await fetch("http://localhost:3001/api/billing/plans");
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
+      const fetchPlans = await fetch(`${apiUrl}/api/billing/trial-free-plans`);
       const json = await fetchPlans.json();
       setPlans(json);
     } catch (e) {
