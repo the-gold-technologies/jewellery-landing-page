@@ -45,7 +45,7 @@ export function Navbar() {
 
         <a
           href="#contact"
-          className="bg-gold hover:bg-gold-dark text-charcoal hover:text-white font-bold py-6 px-8 rounded-4xl cursor-pointer"
+          className="bg-gold hover:bg-gold-dark text-charcoal hover:text-white font-bold py-3 text-sm px-6 rounded-4xl cursor-pointer"
         >
           Book Demo
         </a>

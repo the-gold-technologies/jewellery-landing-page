@@ -8,7 +8,7 @@ export function Footer() {
 
   return (
     <footer className="relative pt-32 pb-16 overflow-hidden border-t border-white/5">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-linear-to-r from-transparent via-gold/20 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-linear-to-r from-transparent via-gold/20 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
@@ -20,7 +20,8 @@ export function Footer() {
             />
 
             <p className="text-white/30 text-sm leading-relaxed mb-10 font-light max-w-xs">
-              Built for jewellery shop owners who want control, clarity, and accurate tracking.
+              Built for jewellery shop owners who want control, clarity, and
+              accurate tracking.
             </p>
             <div className="flex space-x-6">
               {[Share2, Globe, Info, Mail].map((Icon, i) => (
@@ -39,18 +40,16 @@ export function Footer() {
               Product
             </h4>
             <ul className="space-y-6">
-              {["Features", "Solutions", "Testimonials", "Pricing", "FAQ"].map(
-                (item) => (
-                  <li key={item}>
-                    <Link
-                      href={`#${item.toLowerCase()}`}
-                      className="text-sm text-white/30 hover:text-gold transition-colors duration-500 font-light tracking-wide"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                ),
-              )}
+              {["Solutions", "Testimonials", "Pricing", "FAQ"].map((item) => (
+                <li key={item}>
+                  <Link
+                    href={`#${item.toLowerCase()}`}
+                    className="text-sm text-white/30 hover:text-gold transition-colors duration-500 font-light tracking-wide"
+                  >
+                    {item}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -60,7 +59,7 @@ export function Footer() {
             </h4>
             <ul className="space-y-6">
               {[
-                "About Us",
+                "Features",
                 "Privacy Policy",
                 "Terms of Service",
                 "Help Center",
@@ -82,7 +81,8 @@ export function Footer() {
               Contact
             </h4>
             <p className="text-sm text-white/30 leading-loose mb-8 font-light max-w-xs">
-              Direct access to our support setup team for jewelry boutique owners.
+              Direct access to our support setup team for jewelry boutique
+              owners.
             </p>
             <Link
               href="#contact"
@@ -96,15 +96,8 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5 gap-8">
           <p className="text-[10px] text-white/20 font-bold uppercase tracking-[0.3em]">
-            © {currentYear} Aureum Boutique SaaS. All rights reserved.
+            © {currentYear} Karatrix. All rights reserved.
           </p>
-          <div className="flex items-center space-x-10 text-[10px] text-white/20 font-bold uppercase tracking-[0.3em]">
-            <span className="flex items-center group">
-              <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full mr-3 shadow-[0_0_10px_rgba(52,211,153,0.5)] group-hover:scale-110 transition-transform" />
-              System Prime
-            </span>
-            <span className="font-light italic">99.99% Uptime Fidelity</span>
-          </div>
         </div>
       </div>
     </footer>
